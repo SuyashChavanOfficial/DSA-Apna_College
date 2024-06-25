@@ -25,5 +25,7 @@ public class JavaBasics {
         int r = sc.nextInt();
         float area = 22 / 7 * r * r;
         System.out.println("Area of circle is: " + area);
+
+        sc.close();
     }
 }

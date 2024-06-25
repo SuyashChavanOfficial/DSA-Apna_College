@@ -37,5 +37,7 @@ public class calculator {
                 System.out.println("Invalid Input");
                 break;
         }
+
+        sc.close();
     }
 }
