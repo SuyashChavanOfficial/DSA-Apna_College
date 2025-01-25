@@ -42,7 +42,25 @@ public class LinkedList {
         tail = newNode;
     }
 
-    public void addIndex(int index, )
+    public void addIndex(int index, int data) {
+        
+        if(index == 0) {
+            addFirst(data);
+            return;
+        }
+
+        Node newNode = new Node(data);
+        Node temp = head;
+        int i=0;
+
+        while(i < index-1) {
+            temp = temp.next;
+            i++;
+        }
+
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
 
     public void print() {
         if(head == null) {
@@ -69,6 +87,8 @@ public class LinkedList {
         ll.addLast(3);
         ll.print();
         ll.addLast(4);
+        ll.print();
+        ll.addIndex(3, 8);
         ll.print();
     }
 }
